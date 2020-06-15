@@ -1,0 +1,173 @@
+
+body {
+ margin: 0 auto;
+ font-family: Gotham Rounded, sans-serif;
+ padding-bottom: 50px;
+}
+
+.grid {
+ display: grid;
+ grid-template-columns: repeat(6, 1fr);
+ gap: 20px;
+ padding: 0 40px;
+ grid-template-areas: "logo .  . . content content";
+}
+
+/* ---------------------- nav -----------------------*/
+
+.content {
+ grid-area: content;
+ width: 100%;
+}
+
+.brand-logo{
+ grid-area: logo;
+ width: 100%;
+}
+
+.logo {
+ width: 50px;
+ margin-right: .5rem;
+}
+
+.main-nav {
+ display: inline-flex;
+
+}
+.ul-nav li{
+ display: inline;
+ margin-left: 1rem;
+}
+
+.dark-header {
+ background-color: #005681;
+ color: white;
+ position: relative;
+ z-index: 1;
+}
+
+
+.brand-row {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+
+
+
+.dark-header-divider {
+ background-image: url("images/dark-background.svg");
+ height: 150px;
+ margin-top: -5px;
+ background-position: bottom left;
+ background-size: cover;
+ position: relative;
+ z-index: 1;
+}
+
+/* ---------------------- nav -----------------------*/
+
+/* ---------------------- main -----------------------*/
+
+header {
+ background: rgb(0,99,255); 
+ background: linear-gradient(0deg, rgba(0,99,255,1) 0%, rgba(192,244,255,1) 100%);
+}
+
+
+.grid-introduce {
+  grid-template-areas: ". . title sub-title . .";
+}
+
+
+
+.title {
+ grid-area:title;
+ font-size: 3rem;
+ justify-content: flex-end;
+ text-align: end;
+ border-right: 5px solid black;
+ padding-right: 5px;
+ 
+}
+
+.title::after {
+ content: "Resume";
+ font-size: 2rem;
+
+ 
+}
+
+.sub-title {
+ grid-area:sub-title;
+ font-size: 2rem;
+ justify-content: flex-start;
+ text-align: start;
+ padding-top: .5rem;
+ 
+}
+
+.grid-plain {
+ grid-column: span 6;
+ display: flex;
+ justify-content: flex-end;
+
+}
+
+.grid-mountain {
+ grid-template-areas: "mountain mountain mountain mountain down down ";
+}
+
+.mountain {
+ grid-area: mountain;
+}
+
+.scroll-down {
+ display: flex;
+ vertical-align: middle;
+ align-items: center;
+ font-weight: bold;
+ color: white;
+ justify-content: center;
+ grid-area:down;
+ animation-name: down;
+ animation-duration: 6s;
+ animation-iteration-count: infinite;
+ position: relative;
+ animation-timing-function: ease;
+
+}
+
+@keyframes down {
+ from{top: 0;}
+ to{opacity: 0;top: 50px;}
+}
+
+.mc1 {
+ animation: m1 5s linear infinite;
+ animation-direction: alternate; 
+}
+.mc2 {
+ animation: m2 2s linear infinite;
+ animation-direction: alternate; 
+}
+.mc3 {
+ animation: m3 3s linear infinite;
+ animation-direction: alternate; 
+}
+
+@keyframes m1 {
+ 0%   {fill:#e4ffc0;}
+ 100% {fill:#cec0ff; }
+}
+@keyframes m2 {
+ 0%   {fill:#2fd7ff}
+ 100% {fill:#2fffbe}
+}
+@keyframes m3 {
+ 0%   {fill:#6d0077}
+ 100% {fill:#685fba }
+}
+
+/* ---------------------- main -----------------------*/
